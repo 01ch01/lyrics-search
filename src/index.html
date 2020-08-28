@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="keywords" content="song, lyrics, search" />
+    <meta
+      name="description"
+      content="Find your favorite song lyrics right here"
+    />
+    <meta name="author" content="01ch01" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <title>Search your favorite lyrics right here!</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="row justify-content-center mt-4">
+        <h1>Lyrics Search</h1>
+      </div>
+
+      <div class="row justify-content-center">
+        <form id="lyrics_form">
+          <div class="form-row justify-content-center">
+            <div class="form_group col-md-6">
+              <label for="artist">Artist</label>
+              <input
+                type="text"
+                class="form-control"
+                id="artist"
+                placeholder="Artist"
+              />
+            </div>
+            <div class="form_group col-md-6">
+              <label for="title">Title</label>
+              <input
+                type="text"
+                class="form-control"
+                id="title"
+                placeholder="Title"
+              />
+            </div>
+            <button type="submit" class="btn btn-primary mt-4" class="btn">
+              Find!
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="row justify-content-center">
+      <pre class="mt-4" id="lyrics"></pre>
+    </div>
+    <script src="lyrics.js"></script>
+  </body>
+</html>
