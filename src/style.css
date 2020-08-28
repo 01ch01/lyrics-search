@@ -1,27 +1,27 @@
 @font-face {
   font-family: 'opendyslexic';
-  src: url('/assets/open_dyslexic/OpenDyslexic-Regular.otf');
+  src: url('assets/open_dyslexic/OpenDyslexic-Regular.otf');
   font-style: normal;
   font-weight: normal;
 }
 
 @font-face {
   font-family: 'opendyslexic';
-  src: url('/assets/open_dyslexic/OpenDyslexicAlta-Italic.otf');
+  src: url('assets/open_dyslexic/OpenDyslexicAlta-Italic.otf');
   font-style: italic;
   font-weight: normal;
 }
 
 @font-face {
   font-family: 'opendyslexic';
-  src: url('/assets/open_dyslexic/OpenDyslexic-Bold.otf');
+  src: url('assets/open_dyslexic/OpenDyslexic-Bold.otf');
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'opendyslexic';
-  src: url('/assets/open_dyslexic/OpenDyslexic-BoldItalic.otf');
+  src: url('assets/open_dyslexic/OpenDyslexic-BoldItalic.otf');
   font-weight: bold;
   font-style: italic;
 }
