@@ -5,14 +5,14 @@
     <meta name="keywords" content="song, lyrics, search" />
     <meta
       name="description"
-      content="Find your favorite song lyrics right here"
+      content="Wanna sing your favorite song along with the artist? Check it out!"
     />
     <meta name="author" content="01ch01" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
     />
-    <link
+    <!-- <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
@@ -21,47 +21,45 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
       rel="stylesheet"
-    />
+    /> -->
+    <link rel="stylesheet" href="src/style.css" />
     <title>Search your favorite lyrics right here!</title>
   </head>
   <body>
-    <div class="container">
-      <div class="row justify-content-center mt-4">
-        <h1>Lyrics Search</h1>
-      </div>
+    <header style="color: magenta; position: fixed; width: 100vw; padding: 1em">
+      <h1>Lyrics Search</h1>
+    </header>
+    <main>
+      <form style="margin-top: 2rem">
+        <div class="artist-container">
+          <label for="artist">Artist</label>
+          <input type="text" name="artist" id="artist" />
+        </div>
+        <div class="title-container">
+          <label for="title">Title</label>
+          <input type="text" name="title" id="title" />
+        </div>
+        <button type="submit">Find!</button>
+      </form>
 
-      <div class="row justify-content-center">
-        <form id="lyrics_form">
-          <div class="form-row justify-content-center">
-            <div class="form_group col-md-6">
-              <label for="artist">Artist</label>
-              <input
-                type="text"
-                class="form-control"
-                id="artist"
-                placeholder="Artist"
-              />
-            </div>
-            <div class="form_group col-md-6">
-              <label for="title">Title</label>
-              <input
-                type="text"
-                class="form-control"
-                id="title"
-                placeholder="Title"
-              />
-            </div>
-            <button type="submit" class="btn btn-primary mt-4" class="btn">
-              Find!
-            </button>
-          </div>
-        </form>
-      </div>
-    </div>
+      <pre class="lyrics"></pre>
+    </main>
+    <footer>
+      <p>Desenvolvido com ❤︎ por Cláudio Henrique</p>
+      <a href="https://www.github.com/01ch01/">
+        <img src="/src/assets/img/GitHub.png" alt="Me encontre no GitHub" />
+      </a>
+      <a href="mailto:00claudio.henrique@gmail.com">
+        <img src="/src/assets/img/Gmail.png" alt="Me mande um e-mail" />
+      </a>
+      <a href="https://www.linkedin.com/in/01ch01/">
+        <img src="/src/assets/img/LinkedIn.png" alt="Me encontre no LinkedIn" />
+      </a>
+      <a href="https://t.me/claudio_henrique/">
+        <img src="/src/assets/img/Telegram.png" alt="Manda um oi no Telegram" />
+      </a>
+    </footer>
 
-    <div class="row justify-content-center">
-      <pre class="mt-4" id="lyrics"></pre>
-    </div>
     <script src="src/lyrics.js"></script>
   </body>
 </html>
