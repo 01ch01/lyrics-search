@@ -19,6 +19,7 @@ async function doSubmit() {
   try {
     const lyricsResponse = await findLyrics(artist.value, title.value);
     const data = await lyricsResponse.json();
+
     if (data.lyrics) {
       lyrics_el.innerHTML = data.lyrics;
     } else {

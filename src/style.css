@@ -6,12 +6,6 @@ https://colors.muz.li/palette/5F26E2/312a9e/d3d0ff/a7a1ff/ffffff
 
 :root {
   font-family: 'Roboto', sans-serif;
-  --orange: #fc6a00;
-  --black: #000;
-  --white: #fff;
-  --yellow: #fbd914;
-  --purple: #5f26e2;
-
   --blue-purple: #312a9e;
   --purple: #5f26e2;
   --light-purple: #a7a1ff;
@@ -26,66 +20,124 @@ https://colors.muz.li/palette/5F26E2/312a9e/d3d0ff/a7a1ff/ffffff
 
 body {
   background-color: var(--light-purple);
-  text-align: center;
+  color: whitesmoke;
+  display: flex;
   font-size: 1.2em;
+  position: relative;
+  text-align: center;
 }
 
 header {
   background-color: var(--blue-purple);
-  color: whitesmoke;
   font-family: 'Poppins', sans-serif;
-  font-size: 1em;
+  height: 12vh;
   padding: 0.5em;
   position: fixed;
   top: 0;
-  width: 100%;
+  width: 100vw;
   z-index: 1;
-
-  height: 12vh;
 }
 
 .form-lyrics {
+  align-content: center;
   background-color: var(--purple);
-  width: 50vw;
-  /* padding: 1em; */
-  /* margin: 1em; */
-  align-items: center;
-  padding: 1em;
+  border-radius: 0.5em;
   margin: 1em auto;
+  padding: 1em;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+form {
+  display: inline-flex;
+}
+
+form input {
+  border-radius: 0.5em;
+  border: none;
+  /* font-size: 16px; */
+  height: 2em;
+}
+
+form label,
+form input {
+  padding: 0.5em;
+}
+
+form button {
+  border-radius: 0.5rem;
+  border: none;
+  font-family: 'Poppins', sans-serif;
+  margin-left: 1em;
+  padding: 0 1em;
+  text-align: center;
+  cursor: pointer;
 }
 
 .lyrics {
   background-color: var(--lighter-purple);
-  margin: auto;
-  width: 70vw;
+  border-radius: 0.5em;
+  color: black;
+  height: auto;
+  margin: 1em auto;
   padding: 1em;
-  height: calc(100vh - 12vh - 4vh);
+  /* width: 70vw; */
+  /* margin: 2em auto; */
 }
 
 main {
   padding: 5em;
-  background-color: #fff;
-}
-section {
-  font-size: 1em;
+  width: 100vw;
+  /* margin-bottom: 2em; */
 }
 
 footer {
   background-color: var(--blue-purple);
   bottom: 0;
-  color: whitesmoke;
-  padding: 1em;
-  /* position: absolute; */
-  /* height: 10vh; */
   font-family: 'Poppins' sans-serif;
+  padding: 1em;
+  position: absolute;
+  width: 100%;
 }
 
 footer a img {
-  width: 25px;
   height: 25px;
   margin: 10px 10px 0px 10px;
+  width: 25px;
 }
 
 footer a {
   text-decoration: none;
+}
+
+@media (max-width: 300px) {
+  body {
+    background-color: var(--light-purple);
+    color: whitesmoke;
+    font-size: 1em;
+    text-align: center;
+  }
+
+  .lyrics {
+    box-sizing: border-box;
+    justify-content: center;
+    margin: 0;
+    width: 100vw;
+  }
+}
+@media (max-width: 700px) {
+  .lyrics {
+    box-sizing: border-box;
+    justify-content: center;
+  }
+
+  body {
+    background-color: var(--light-purple);
+    color: whitesmoke;
+    font-size: 1em;
+    text-align: center;
+  }
+}
+
+@media (max-width: 500px) {
 }
