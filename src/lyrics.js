@@ -22,10 +22,19 @@ async function doSubmit() {
 
     if (data.lyrics) {
       lyrics_el.innerHTML = data.lyrics;
+      clearInputs();
     } else {
       lyrics_el.innerHTML = data.error;
     }
   } catch (err) {
     console.log(err);
   }
+}
+
+function clearInputs() {
+  const artistInputEl = document.querySelector('input#artist');
+  const titleInputEl = document.querySelector('input#title');
+
+  artistInputEl.value = '';
+  titleInputEl.value = '';
 }

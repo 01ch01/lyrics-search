@@ -20,6 +20,7 @@ https://colors.muz.li/palette/5F26E2/312a9e/d3d0ff/a7a1ff/ffffff
 
 body {
   background-color: var(--light-purple);
+  background-color: #999fff;
   color: whitesmoke;
   display: flex;
   font-size: 1.2em;
@@ -40,12 +41,14 @@ header {
 
 .form-lyrics {
   align-content: center;
-  background-color: var(--purple);
+  background-color: var(--lighter-purple);
   border-radius: 0.5em;
+  color: black;
   margin: 1em auto;
   padding: 1em;
   margin-left: 1em;
   margin-right: 1em;
+  border: 2px solid var(--purple);
 }
 
 form {
@@ -55,8 +58,17 @@ form {
 form input {
   border-radius: 0.5em;
   border: none;
-  /* font-size: 16px; */
   height: 2em;
+}
+
+form button,
+form input {
+  font-size: 0.8em;
+}
+
+form input:focus {
+  border: 2px solid var(--purple);
+  outline: none;
 }
 
 form label,
@@ -64,31 +76,47 @@ form input {
   padding: 0.5em;
 }
 
+form .artist-container,
+form .title-container {
+  margin-left: 1em;
+  margin-right: 1em;
+  align-self: center;
+}
+
 form button {
   border-radius: 0.5rem;
   border: none;
   font-family: 'Poppins', sans-serif;
   margin-left: 1em;
-  padding: 0 1em;
+  padding: 0.5em 1.5em;
   text-align: center;
   cursor: pointer;
+  color: white;
+  background-color: var(--purple);
+  font-size: 0.8em;
+}
+
+form button:focus,
+form button:hover {
+  outline: none;
+  background-color: var(--light-purple);
+  color: black;
+  transition: 500ms;
 }
 
 .lyrics {
   background-color: var(--lighter-purple);
+
   border-radius: 0.5em;
   color: black;
   height: auto;
   margin: 1em auto;
   padding: 1em;
-  /* width: 70vw; */
-  /* margin: 2em auto; */
 }
 
 main {
   padding: 5em;
   width: 100vw;
-  /* margin-bottom: 2em; */
 }
 
 footer {
@@ -100,10 +128,12 @@ footer {
   width: 100%;
 }
 
-footer a img {
+footer a i {
   height: 25px;
   margin: 10px 10px 0px 10px;
   width: 25px;
+  font-size: 1.5em;
+  color: whitesmoke;
 }
 
 footer a {
