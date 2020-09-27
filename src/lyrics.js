@@ -9,22 +9,27 @@ form.addEventListener('submit', (el) => {
 });
 
 async function doSubmit() {
-  const lyrics_el = document.querySelector('.lyrics');
+  const lyricsEl = document.querySelector('.lyrics');
   const artist = document.querySelector('#artist');
   const title = document.querySelector('#title');
 
-  // lyrics_el.innerHTML =
-  //   '<div class = "spinner-grow" role = "status" > <span class = "sr-only">Loading...</span></div>';
+  const loadingEl = document.createElement('div');
+  loadingEl.setAttribute('class', 'loader');
+
+  let loadingText = document.createTextNode('Loading...');
+  loadingEl.appendChild(loadingText);
+
+  lyricsEl.appendChild(loadingEl);
 
   try {
     const lyricsResponse = await findLyrics(artist.value, title.value);
     const data = await lyricsResponse.json();
 
     if (data.lyrics) {
-      lyrics_el.innerHTML = data.lyrics;
+      lyricsEl.innerHTML = data.lyrics;
       clearInputs();
     } else {
-      lyrics_el.innerHTML = data.error;
+      lyricsEl.innerHTML = data.error;
     }
   } catch (err) {
     console.log(err);
