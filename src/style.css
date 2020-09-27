@@ -29,7 +29,6 @@ body {
 header {
   background-color: var(--blue-purple);
   font-family: 'Poppins', sans-serif;
-  height: 12vh;
   padding: 0.5em;
   position: fixed;
   top: 0;
@@ -104,37 +103,28 @@ form button:hover {
 
 .lyrics {
   background-color: var(--lighter-purple);
-
+  display: none;
   border-radius: 0.5em;
   color: black;
   height: auto;
   margin: 1em auto;
   padding: 1em;
+  justify-content: center;
 }
 
 main {
   padding: 5em;
   width: 100vw;
   height: 100vh;
-  /* height: calc(100vh - 12vh - 4vh); */
 }
 
 footer {
   background-color: var(--blue-purple);
-  bottom: 0;
-  font-family: 'Poppins' sans-serif;
-  padding: 1em;
   position: absolute;
-  width: 100vw;
-}
-
-@media (min-height: 100vh) {
-  main {
-    height: calc(100vh - 12vh - 4vh);
-  }
-  footer {
-    height: auto;
-  }
+  bottom: 0;
+  font-family: 'Poppins', sans-serif;
+  padding: 1em;
+  width: 100%;
 }
 
 footer a i {
