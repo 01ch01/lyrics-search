@@ -10,6 +10,8 @@ form.addEventListener('submit', (el) => {
 
 async function doSubmit() {
   const lyricsEl = document.querySelector('.lyrics');
+  // lyricsEl.style.display = 'flex';
+
   const artist = document.querySelector('#artist');
   const title = document.querySelector('#title');
 

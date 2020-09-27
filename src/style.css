@@ -104,12 +104,13 @@ form button:hover {
 
 .lyrics {
   background-color: var(--lighter-purple);
-
+  /* display: none; */
   border-radius: 0.5em;
   color: black;
   height: auto;
   margin: 1em auto;
   padding: 1em;
+  justify-content: center;
 }
 
 main {
