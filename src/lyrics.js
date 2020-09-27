@@ -26,24 +26,30 @@ async function doSubmit() {
     const lyricsResponse = await findLyrics(artist.value, title.value);
     const data = await lyricsResponse.json();
 
+    clearInputs(artist, title);
     if (data.lyrics) {
-      updateMainContainer();
+      updateMainContainer(artist, title);
       lyricsEl.innerHTML = data.lyrics;
-      clearInputs();
     } else {
-      lyricsEl.innerHTML = data.error;
+      lyricsEl.innerHTML = '';
+      let errorText = document.createTextNode(
+        "It looks like we didn't find the song you were looking for 😕\n\n" +
+          'Please verify the orthography and try again'
+      );
+
+      lyricsEl.appendChild(errorText);
     }
   } catch (err) {
     console.log(err);
   }
 }
 
-function clearInputs() {
-  const artistInputEl = document.querySelector('input#artist');
-  const titleInputEl = document.querySelector('input#title');
+function clearInputs(artist, title) {
+  // let artistInputEl = document.querySelector('input#artist');
+  // let titleInputEl = document.querySelector('input#title');
 
-  artistInputEl.value = '';
-  titleInputEl.value = '';
+  artist.value = '';
+  title.value = '';
 }
 
 function updateMainContainer() {

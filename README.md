@@ -11,4 +11,4 @@ All credits goes to [Basile Bruneau](https://github.com/NTag) ([his gh repo](htt
 - [ ] CSS Media queries for different screens
 - [ ] Save favorite lyrics (localStorage/Cookies)
 - [ ] Song video clip (see YouTube API documentation)
-- [ ] Libras and ASL translation
+- [ ] Libras and ASL translation/description
