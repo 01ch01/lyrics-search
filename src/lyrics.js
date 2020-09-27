@@ -10,7 +10,7 @@ form.addEventListener('submit', (el) => {
 
 async function doSubmit() {
   const lyricsEl = document.querySelector('.lyrics');
-  // lyricsEl.style.display = 'flex';
+  lyricsEl.style.display = 'flex';
 
   const artist = document.querySelector('#artist');
   const title = document.querySelector('#title');
@@ -20,7 +20,6 @@ async function doSubmit() {
 
   let loadingText = document.createTextNode('Loading...');
   loadingEl.appendChild(loadingText);
-
   lyricsEl.appendChild(loadingEl);
 
   try {
@@ -28,6 +27,7 @@ async function doSubmit() {
     const data = await lyricsResponse.json();
 
     if (data.lyrics) {
+      updateMainContainer();
       lyricsEl.innerHTML = data.lyrics;
       clearInputs();
     } else {
@@ -44,4 +44,10 @@ function clearInputs() {
 
   artistInputEl.value = '';
   titleInputEl.value = '';
+}
+
+function updateMainContainer() {
+  const mainEl = document.querySelector('main');
+  mainEl.style.height = 'auto';
+  mainEl.style.marginBottom = '2em';
 }
