@@ -62,7 +62,7 @@ form input {
 
 form button,
 form input {
-  font-size: 0.8rem;
+  font-size: 0.8em;
 }
 
 form input:focus {
@@ -117,7 +117,7 @@ form button:hover {
 }
 
 main {
-  padding: 5rem;
+  padding: 4rem 1em 2em 1em;
   width: 100vw;
   height: 100vh;
 }
@@ -202,17 +202,22 @@ footer a {
   }
 }
 
-@media (max-width: 924px) {
-  form {
-    /* display: block; */
+@media (max-width: 900px) {
+  body {
+    font-size: 1em;
   }
+
   form button {
-    vertical-align: middle;
+    padding: 0.5em;
+  }
+
+  .main {
+    padding: 0;
   }
 }
 
-@media (max-width: 500px) {
-}
-
-@media (max-width: 300px) {
+@media (max-width: 634px) {
+  form button i {
+    font-size: 0;
+  }
 }
